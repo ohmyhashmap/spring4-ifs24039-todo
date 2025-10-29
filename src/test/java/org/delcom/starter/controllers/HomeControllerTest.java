@@ -18,4 +18,20 @@ class HomeControllerUnitTest {
         // Assert
         assertEquals("Hay Abdullah, selamat datang di pengembangan aplikasi dengan Spring Boot!", result);
     }
+
+    /*
+     * Tambahan test untuk metode sayHello dengan parameter nama
+     */
+    @Test
+    @DisplayName("Mengembalikan pesan sapaan yang dipersonalisasi")
+    void helloWithName_ShouldReturnPersonalizedGreeting() throws Exception {
+        // Arrange
+        HomeController controller = new HomeController();
+
+        // Act
+        String result = controller.sayHello("Abdullah");
+
+        // Assert
+        assertEquals("Hello, Abdullah!", result);
+    }
 }
