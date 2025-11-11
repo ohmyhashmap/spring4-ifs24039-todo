@@ -458,7 +458,7 @@ public class HomeController {
 
     // }
 
-    @GetMapping("/palingTer/strBase64")
+    @GetMapping("/palingTer/{strBase64}")
     public String palingTer(@PathVariable String strBase64) throws IOException {
         String decodedInput = helper.convertBase64ToPlain(strBase64, "base64.txt", "base64-ke-plain.txt");
 
