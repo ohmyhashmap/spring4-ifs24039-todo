@@ -258,6 +258,7 @@ public class HomeController {
                     + "Perbedaan: Tidak Ada\n"
                     + "Dominan: " + nilaiTengah + "\n";
             plain = plain.replaceAll("\n", "<br/>");
+            helper.convertPlainToBase64(plain, "plain.txt", "plain-ke-base64.txt");
             return plain;
         }
 
@@ -275,6 +276,7 @@ public class HomeController {
                     + "Perbedaan: Tidak Ada\n"
                     + "Dominan: " + nilaiTengah + "\n";
             plain = plain.replaceAll("\n", "<br/>");
+            helper.convertPlainToBase64(plain, "plain.txt", "plain-ke-base64.txt");
             return plain;
         }
 
@@ -318,6 +320,7 @@ public class HomeController {
                 + "Perbedaan: " + perbedaan + "\n"
                 + "Dominan: " + dominan + "\n";
         plain = plain.replaceAll("\n", "<br/>");
+        helper.convertPlainToBase64(plain, "plain.txt", "plain-ke-base64.txt");
         return plain;
     }
 
